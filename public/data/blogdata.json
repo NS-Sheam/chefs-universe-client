@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "question": "Tell us the differences between uncontrolled and controlled components?",
+        "answer": "the key difference between controlled and uncontrolled components is that controlled components store their state in the parent component, while uncontrolled components store their state internally. Controlled components provide a way for the parent component to control the state of the child component, while uncontrolled components do not."
+    },
+    {
+        "id": 2,
+        "question": "How to validate React props using PropTypes?",
+        "answer": "In React, PropTypes is a library that provides a way to specify the types of props that a component should receive. This helps to ensure that the correct types of props are passed to a component, which can help prevent errors and make debugging easier. To use PropTypes, wefirst need to import it from the 'prop-types' package.Then, you can define the PropTypes for your component by adding a propTypes property to the component.The propTypes are defined as an object with keys that correspond to the names of the props that the component expects. The values of the propTypes are PropTypes objects that specify the type of each prop."
+    },
+    {
+        "id": 3,
+        "question": "Tell us the difference between nodejs and express js.",
+        "answer": "Node.js is a powerful runtime environment for executing JavaScript code outside of a web browser, while Express.js is a web framework that provides a set of tools and abstractions for building web applications and APIs on top of Node.js."
+    },
+    {
+        "id": 4,
+        "question": "What is a custom hook, and why will you create a custom hook?",
+        "answer": "In React, a custom hook is a function that allows you to encapsulate reusable logic that can be shared across components. Custom hooks are regular JavaScript functions that use other React hooks to provide additional functionality, such as state management, event handling, or data fetching."
+    }
+]

@@ -1,0 +1,25 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+.banner-carousel{
+    height: 100vh;
+}
+
+/* .carousel-control-prev {
+  margin-left: -6%;
+}
+
+.carousel-control-next {
+  margin-right: -6%;
+} */
+
+.carousel-indicators li {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.carousel-indicators .active {
+  background-color: #000000;
+}

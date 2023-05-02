@@ -8,7 +8,7 @@ function Header() {
     return (
         <Navbar className='header' expand="lg">
             <Container>
-                <Navbar.Brand href="#home" className='text-white'><small className='logo fw-bold'>React-Bootstrap</small></Navbar.Brand>
+                <Navbar.Brand href="#home" className='text-white'><small className='logo fw-bold'>chef's universe</small></Navbar.Brand>
                 <div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
