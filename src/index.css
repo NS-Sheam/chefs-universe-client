@@ -9,3 +9,6 @@
   .band-secondary{
     color: var(--secondary-color);
   }
+  .band-bg{
+    background-color: var(--primary-color);
+  }

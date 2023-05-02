@@ -20,7 +20,7 @@ const Banner = () => {
                     </Row>
                     <div>
                         <h1 className='logo fw-bold band-color text-lg text-end'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
-                        <p className='band-secondary text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                        <p className='band-color text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
                     </div>
                 </div>
             </Carousel.Item>
@@ -28,7 +28,7 @@ const Banner = () => {
                 <div className="my-5 d-flex flex-column flex-md-row align-items-center justify-content-center banner-carousel">
                     <div>
                         <h1 className='logo fw-bold band-color text-lg text-start'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
-                        <p className='band-secondary text-sm-start'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                        <p className='band-color text-sm-start'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
                     </div>
                     <Row>
                         <Col xs={4} md={12}>
@@ -46,7 +46,7 @@ const Banner = () => {
                     </Row>
                     <div>
                         <h1 className='logo fw-bold band-color text-lg text-end'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
-                        <p className='band-secondary text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                        <p className='band-color text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
                     </div>
                 </div>
             </Carousel.Item>

@@ -8,3 +8,9 @@
     text-decoration: none;
     color: white;
 }
+.header .logo{
+    font-size: 30px;
+}
+.header a{
+    font-size: 20px;
+}
