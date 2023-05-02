@@ -1,6 +1,7 @@
 import React from 'react';
 import ChefBanner from '../ChefBanner/ChefBanner';
 import { useLoaderData } from 'react-router-dom';
+import Recipies from '../Recipies/Recipies';
 
 const ChefRecipies = () => {
     const {chefData, recipeData} = useLoaderData();
@@ -8,6 +9,7 @@ const ChefRecipies = () => {
     return (
         <div>
             <ChefBanner chefData={chefData}/>
+            <Recipies recipeData={recipeData}/>
         </div>
     );
 };
