@@ -11,7 +11,7 @@ const Feedback = () => {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Row>
                             <Col lg={8} className='mx-auto'>
-                                <div className='d-flex justify-content-center align-items-center'>
+                                <div className='d-flex flex-column gap-3 flex-md-row px-4 justify-content-center align-items-center'>
                                     <Form.Control className='py-3' type="text" name='text' placeholder="Your Feedback" required />
                                     <button className='fw-bold text-white px-4 py-3 ms-2 border-0 rounded-2 band-bg'>Submit</button>
                                 </div>
