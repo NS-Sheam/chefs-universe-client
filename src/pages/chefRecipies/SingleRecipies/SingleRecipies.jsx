@@ -26,7 +26,13 @@ const SingleRecipies = ({ data }) => {
                     </p>
                     <p className='fw-bold d-flex justify-content-between'>
                         <span>Rating: {rating}</span>
-                        <span>Fav</span>
+                        <span>
+                            {/* <Rating
+                                style={{ maxWidth: 180 }}
+                                value={rating}
+                                onChange={rating}
+                            /> */}
+                        </span>
                     </p>
                 </Card.Text>
             </Card.Body>

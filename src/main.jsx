@@ -8,9 +8,12 @@ import {
 } from "react-router-dom";
 import Footer from './pages/shared/Footer/Footer.jsx';
 import { router } from './routes/Routes.jsx';
+import AuthProvider from './providers/AuthProvider.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} ></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router} ></RouterProvider>
+    </AuthProvider>
   </React.StrictMode>,
 )

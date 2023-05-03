@@ -6,7 +6,7 @@ const AllCards = ({ chefData }) => {
     return (
         <Row className='mt-4 mb-4'>
             {
-                chefData.map(data => <Col xs={12} md={6} lg={4} className=''>
+                chefData.map((data) => <Col xs={12} md={6} lg={4} className=''>
                     <SingleChef
                         key={data.chefId}
                         data={data} />

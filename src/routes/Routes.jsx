@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home/Home";
 import Blogs from "../pages/Home/Blogs/Blogs/Blogs";
 import ChefRecipies from "../pages/chefRecipies/ChefRecipies/ChefRecipies";
 import { getChefData } from "../utilities/customLoader";
+import Register from "../pages/login/Register/Register";
+import Login from "../pages/login/Login/Login";
 
 export const router = createBrowserRouter([
     {
@@ -22,7 +24,15 @@ export const router = createBrowserRouter([
             {
                 path: "chef/:id",
                 element: <ChefRecipies />,
-                loader: ({params}) => getChefData(params.id)
+                loader: ({ params }) => getChefData(params.id)
+            },
+            {
+                path: "/register",
+                element: <Register />
+            },
+            {
+                path: "/login",
+                element: <Login />
             }
         ]
     },
