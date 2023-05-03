@@ -7,11 +7,13 @@ import { getChefData } from "../utilities/customLoader";
 import Register from "../pages/login/Register/Register";
 import Login from "../pages/login/Login/Login";
 import PrivateRoutes from "./PrivateRoutes";
+import Errorpage from "../pages/Errorpage/Errorpage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main />,
+        errorElement: <Errorpage />,
         children: [
             {
                 path: "/",
