@@ -15,43 +15,37 @@ const Footer = () => {
                         </p>
                     </Col>
                     <Col lg={3} md={6} className="mb-4 mb-md-0">
-                        <h5 className="text-uppercase">Links</h5>
+                        <h5 className="text-uppercase">Menu</h5>
                         <ul className="list-unstyled mb-0">
                             <li>
-                                <Link to="#!" className="text-white">Link 1</Link>
+                                <Link to="/" className="text-white">Home</Link>
                             </li>
                             <li>
-                                <Link to="#!" className="text-white">Link 2</Link>
+                                <Link to="/blogs" className="text-white">Blogs</Link>
                             </li>
                             <li>
-                                <Link to="#!" className="text-white">Link 3</Link>
+                                <Link to="/about" className="text-white">About</Link>
                             </li>
                             <li>
-                                <Link to="#!" className="text-white">Link 4</Link>
+                                <Link to="/contact" className="text-white">Contact</Link>
                             </li>
                         </ul>
                     </Col>
                     <Col lg={3} md={6} className="mb-4 mb-md-0">
-                        <h5 className="text-uppercase mb-0">Links</h5>
+                        <h5 className="text-uppercase mb-0">Sub-menu</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <Link to="#!" className="text-white">Link 1</Link>
+                                <Link to="/login" className="text-white">Login</Link>
                             </li>
                             <li>
-                                <Link to="#!" className="text-white">Link 2</Link>
-                            </li>
-                            <li>
-                                <Link to="#!" className="text-white">Link 3</Link>
-                            </li>
-                            <li>
-                                <Link to="#!" className="text-white">Link 4</Link>
+                                <Link to="/register" className="text-white">Register</Link>
                             </li>
                         </ul>
                     </Col>
                 </Row>
             </Container>
             <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                © {new Date().getFullYear()} My Company
+                © {new Date().getFullYear()} chef's universe
             </div>
         </footer>
     );

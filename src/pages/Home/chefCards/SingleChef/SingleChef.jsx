@@ -5,12 +5,15 @@ import { FaThumbsUp } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBowlFood } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 const SingleChef = ({ data }) => {
     const { chefId, recipeId, chefImage, chefName, yearOfExperience, numberOfRecipes, likes } = data;
     return (
         <Card className='chefCard mb-4'>
-            <Card.Img className='h-50' variant="top" src={chefImage} />
+            <LazyLoad className='h-50'>
+                <Card.Img className='h-100' variant="top" src={chefImage} />
+            </LazyLoad>
             <Card.Body>
                 <Card.Title className='band-color fw-bold display-6'>{chefName}</Card.Title>
                 <Card.Text className='h4 fw-bold'>

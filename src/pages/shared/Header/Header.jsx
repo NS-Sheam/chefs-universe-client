@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { Spinner } from 'react-bootstrap';
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 function Header() {
     const { user, logOut, loading } = useContext(AuthContext);
@@ -15,6 +16,7 @@ function Header() {
         return <Spinner></Spinner>;
     }
     const handleLogout = () => {
+        console.log("hello");
         logOut()
             .then()
             .catch(error => console.log(error))
@@ -23,15 +25,15 @@ function Header() {
     return (
         <Navbar variant="dark" className='header' expand="lg">
             <Container>
-                <Link to="/" className='text-white'><small className='logo fw-bold'>chef's universe</small></Link>
+                <Link to="/" className='text-white'><small className='fw-bolder fst-italic'>chef's universe</small></Link>
                 <div>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" className=''>
                         <Nav className="me-auto text-white d-flex">
-                            <Link className='me-lg-3 py-2' to="/">Home</Link>
-                            <Link className='me-lg-3 py-2' to="/blogs">Blog</Link>
-                            <Link className='me-lg-3 py-2' to="/">About</Link>
-                            <Link className='me-lg-3 py-2' to="/">Contact</Link>
+                            <ActiveLink to="/">Home</ActiveLink>
+                            <ActiveLink to="/blogs">Blog</ActiveLink>
+                            <ActiveLink to="/about">About</ActiveLink>
+                            <ActiveLink to="/contact">Contact</ActiveLink>
                         </Nav>
                         <Nav className="me-auto align-items-center flex-grow-1">
                             <Link className=''>
@@ -43,8 +45,8 @@ function Header() {
                             </Link>
                             {
                                 user ?
-                                    <Link className='me-lg-3 py-2' onClick={handleLogout}>Logout</Link> :
-                                    <Link className='me-lg-3 py-2' to="/login">Login</Link>
+                                    <Link onClick={handleLogout} className='me-lg-3 py-2'><span>Logout</span></Link> :
+                                    <ActiveLink className='me-lg-3 py-2' to="/login">Login</ActiveLink>
                             }
                         </Nav>
                     </Navbar.Collapse>

@@ -8,6 +8,8 @@ import Register from "../pages/login/Register/Register";
 import Login from "../pages/login/Login/Login";
 import PrivateRoutes from "./PrivateRoutes";
 import Errorpage from "../pages/Errorpage/Errorpage";
+import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -32,12 +34,20 @@ export const router = createBrowserRouter([
                 loader: ({ params }) => getChefData(params.id)
             },
             {
-                path: "/register",
+                path: "register",
                 element: <Register />
             },
             {
-                path: "/login",
+                path: "login",
                 element: <Login />
+            },
+            {
+                path: "about",
+                element: <About />
+            },
+            {
+                path: "contact",
+                element: <Contact />
             }
         ]
     },

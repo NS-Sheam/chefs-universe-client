@@ -1,15 +1,15 @@
 import React from 'react';
-import SingleChef from '../SingleChef/SingleChef';
+import SingleChefTalk from './SingleChefTalk';
 import { Col, Row } from 'react-bootstrap';
 
-const AllCards = ({ chefData }) => {
+const ChefTalk = ({chefData}) => {
     return (
         <div>
             <h2 className='py-4 fw-bold'>Our chef's</h2>
         <Row className='mt-4 mb-4'>
             {
-                chefData.map((data) => <Col xs={12} md={6} lg={4} className=''>
-                    <SingleChef
+                chefData.map((data) => <Col xs={12} md={6} className='mb-3'>
+                    <SingleChefTalk
                         key={data.chefId}
                         data={data} />
                 </Col>)
@@ -19,4 +19,4 @@ const AllCards = ({ chefData }) => {
     );
 };
 
-export default AllCards;
+export default ChefTalk;
