@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import googleBtn from "../../../assets/GoogleSignUpDark.png"
 import gitHubBtn from "../../../assets/gh-login-button.png"
@@ -8,12 +8,15 @@ import gitHubBtn from "../../../assets/gh-login-button.png"
 const Login = () => {
     const { signIn } = useContext(AuthContext);
     const [error, setError] = useState(null);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.form?.pathname || "/"
     const handleLoginWithPassword = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;

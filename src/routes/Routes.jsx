@@ -6,6 +6,7 @@ import ChefRecipies from "../pages/chefRecipies/ChefRecipies/ChefRecipies";
 import { getChefData } from "../utilities/customLoader";
 import Register from "../pages/login/Register/Register";
 import Login from "../pages/login/Login/Login";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -23,7 +24,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: "chef/:id",
-                element: <ChefRecipies />,
+                element: <PrivateRoutes>
+                    <ChefRecipies />
+                </PrivateRoutes>,
                 loader: ({ params }) => getChefData(params.id)
             },
             {

@@ -4,8 +4,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaAccessibleIcon, FaUser } from "react-icons/fa";
 import "./Header.css"
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
+import { Spinner } from 'react-bootstrap';
 
 function Header() {
+    const { user, logOut, loading } = useContext(AuthContext);
+    if(loading){
+        return <Spinner></Spinner>;
+    }
+    const handleLogout= () =>{
+        logOut()
+        .then()
+        .catch(error => console.log(error))
+    }
+    
     return (
         <Navbar variant="dark" className='header' expand="lg">
             <Container>
@@ -21,9 +34,13 @@ function Header() {
                         </Nav>
                         <Nav className="me-auto align-items-center flex-grow-1">
                             <Link className='border border-2 border-white rounded-circle p-1 d-flex justify-content-center align-items-center me-lg-3 py-2'>
-                                <FaUser />
+                                <FaUser title={user && user.displayName} />
                             </Link>
-                            <Link className='me-lg-3 py-2' to="/">Logout</Link>
+                            {
+                                user ?
+                                    <Link className='me-lg-3 py-2' onClick={handleLogout}>Logout</Link> :
+                                    <Link className='me-lg-3 py-2' to="/login">Login</Link>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </div>
