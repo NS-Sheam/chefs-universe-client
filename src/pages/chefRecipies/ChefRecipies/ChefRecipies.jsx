@@ -7,7 +7,7 @@ import { Toaster } from 'react-hot-toast';
 
 const ChefRecipies = () => {
     const { chefData, recipeData } = useLoaderData();
-    console.log(chefData, recipeData);
+    // console.log(chefData, recipeData);
     return (
         <div>
             <ChefBanner chefData={chefData} />

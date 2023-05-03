@@ -23,3 +23,8 @@
 .carousel-indicators .active {
   background-color: #000000;
 }
+.banner{
+  background: url("../../../assets/head-banner.jpg") no-repeat;
+  background-blend-mode: overlay;
+  background-color: #c6959564;
+}
