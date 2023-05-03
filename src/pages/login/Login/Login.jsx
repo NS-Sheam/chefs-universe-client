@@ -6,7 +6,7 @@ import googleBtn from "../../../assets/GoogleSignUpDark.png"
 import gitHubBtn from "../../../assets/gh-login-button.png"
 
 const Login = () => {
-    const { signIn, signInWithGoogle } = useContext(AuthContext);
+    const { signIn, signInWithGoogle, githubSignIn } = useContext(AuthContext);
     const [error, setError] = useState(null);
     const location = useLocation();
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 navigate(from, { replace: true })
                 form.reset();
 
@@ -30,14 +30,22 @@ const Login = () => {
             })
 
     }
-    const handleGoogleSignIn = () =>{
+    const handleGoogleSignIn = () => {
         signInWithGoogle()
-        .then(result => {
-            const loggedUser = result.user;
-            console.log(loggedUser);
-            navigate(from, { replace: true })
-        })
-        .catch(error => setError(error))
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate(from, { replace: true })
+            })
+            .catch(error => setError(error))
+    }
+    const handleGithubSignIn = () => {
+        githubSignIn()
+            .then(result => {
+                const loggedUser = result.user;
+                navigate(from, { replace: true })
+            })
+            .catch(error => setError(error))
     }
     return (
         <Container className='mx-auto my-5'>
@@ -72,12 +80,12 @@ const Login = () => {
                             }
                         </Form.Text>
                     </Form>
-                            <Link onClick={handleGoogleSignIn}>
-                            <img className='img-fluid w-50 d-block mx-auto my-2' src={googleBtn} alt="" />
-                            </Link>
-                            <Link>
-                            <img className='img-fluid w-50 d-block mx-auto my-2' src={gitHubBtn} alt="" />
-                            </Link>
+                    <Link onClick={handleGoogleSignIn}>
+                        <img className='img-fluid w-50 d-block mx-auto my-2' src={googleBtn} alt="" />
+                    </Link>
+                    <Link onClick={handleGithubSignIn}>
+                        <img className='img-fluid w-50 d-block mx-auto my-2' src={gitHubBtn} alt="" />
+                    </Link>
                 </Col>
             </Row>
         </Container>

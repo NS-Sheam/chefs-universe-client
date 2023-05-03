@@ -9,9 +9,9 @@ const Recipies = ({ recipeData }) => {
             <h1 className='mb-5'>My Recipies</h1>
             <Row className='mt-4 mb-4'>
                 {
-                    recipeData.map(data => <Col xs={12} md={6} lg={4} className=''>
+                    recipeData.map((data, i) => <Col xs={12} md={6} lg={4} className=''>
                         <SingleRecipies
-                            key={data.recipeId}
+                            key={i}
                             data={data} />
                     </Col>)
                 }

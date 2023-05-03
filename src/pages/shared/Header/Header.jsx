@@ -11,15 +11,15 @@ import { Spinner } from 'react-bootstrap';
 function Header() {
     const { user, logOut, loading } = useContext(AuthContext);
     // console.log(user.displayName);
-    if(loading){
+    if (loading) {
         return <Spinner></Spinner>;
     }
-    const handleLogout= () =>{
+    const handleLogout = () => {
         logOut()
-        .then()
-        .catch(error => console.log(error))
+            .then()
+            .catch(error => console.log(error))
     }
-    
+
     return (
         <Navbar variant="dark" className='header' expand="lg">
             <Container>
@@ -34,8 +34,12 @@ function Header() {
                             <Link className='me-lg-3 py-2' to="/">Contact</Link>
                         </Nav>
                         <Nav className="me-auto align-items-center flex-grow-1">
-                            <Link className='border border-2 border-white rounded-circle p-1 d-flex justify-content-center align-items-center me-lg-3 py-2'>
-                                <FaUser title={user && user.displayName} />
+                            <Link className=''>
+                                {
+                                    user?.photoURL ?
+                                        <img title={user.displayName} src={user.photoURL} className='user-img rounded-circle' alt="" /> :
+                                        <FaUser className='border border-2 border-white rounded-circle p-1 d-flex justify-content-center align-items-center me-lg-3 py-2 user-img' />
+                                }
                             </Link>
                             {
                                 user ?
