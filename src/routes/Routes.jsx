@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
-                loader: () => fetch("http://localhost:5000/")
+                loader: () => fetch("https://chef-recipe-hunting-server-ns-sheam.vercel.app/")
             },
             {
                 path: "blogs",

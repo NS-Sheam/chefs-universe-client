@@ -10,6 +10,7 @@ import { Spinner } from 'react-bootstrap';
 
 function Header() {
     const { user, logOut, loading } = useContext(AuthContext);
+    // console.log(user.displayName);
     if(loading){
         return <Spinner></Spinner>;
     }

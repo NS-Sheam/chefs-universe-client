@@ -6,7 +6,7 @@ import googleBtn from "../../../assets/GoogleSignUpDark.png"
 import gitHubBtn from "../../../assets/gh-login-button.png"
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState(null);
     const location = useLocation();
     const navigate = useNavigate();
@@ -29,6 +29,15 @@ const Login = () => {
                 setError(error);
             })
 
+    }
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            navigate(from, { replace: true })
+        })
+        .catch(error => setError(error))
     }
     return (
         <Container className='mx-auto my-5'>
@@ -63,7 +72,7 @@ const Login = () => {
                             }
                         </Form.Text>
                     </Form>
-                            <Link>
+                            <Link onClick={handleGoogleSignIn}>
                             <img className='img-fluid w-50 d-block mx-auto my-2' src={googleBtn} alt="" />
                             </Link>
                             <Link>

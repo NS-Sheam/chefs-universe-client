@@ -3,6 +3,8 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FaCheck } from 'react-icons/fa';
 import "./SingleRecipies.css"
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
 
 const SingleRecipies = ({ data }) => {
     const { recipeName, recipeImg, ingredients, methodOfCooking, rating } = data;
@@ -24,14 +26,13 @@ const SingleRecipies = ({ data }) => {
                     <p className='text-start'>
                         <span className='fw-bold text-decoration-underline'>Cooking Process:</span> {methodOfCooking}
                     </p>
-                    <p className='fw-bold d-flex justify-content-between'>
+                    <p className='fw-bold'>
                         <span>Rating: {rating}</span>
                         <span>
-                            {/* <Rating
-                                style={{ maxWidth: 180 }}
-                                value={rating}
-                                onChange={rating}
-                            /> */}
+                            <Rating
+                                style={{ maxWidth: 100 }}
+                                value={rating} readOnly
+                            />
                         </span>
                     </p>
                 </Card.Text>
