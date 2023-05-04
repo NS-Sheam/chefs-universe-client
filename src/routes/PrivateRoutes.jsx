@@ -8,7 +8,7 @@ const PrivateRoutes = ({children}) => {
     const location = useLocation();
     // console.log(location);
     if (loading) {
-        return <Spinner className='d-block mx-auto' animation="grow" />
+        return <Spinner className='d-block mx-auto' animation="border" />
     }
     if (user) {
         return children;       
