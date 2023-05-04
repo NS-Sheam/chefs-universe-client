@@ -1,12 +1,12 @@
 import React from 'react';
-import { Form, Row, Col } from 'react-bootstrap';
+import { Form, Row, Col, Container } from 'react-bootstrap';
 import "./Feedback.css"
 
 const Feedback = () => {
     return (
         <div className='feedback d-flex vh-100 align-items-center justify-content-center mb-4'>
-            <div>
-                <h2 className='text-black py-4 fw-bold text-center'>Give us your feedback about our chefs</h2>
+            <Container>
+                <h4 className='text-black py-4 fw-bold text-center'>Give us your feedback about our chefs</h4>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Row>
@@ -14,7 +14,7 @@ const Feedback = () => {
                                 <div data-aos="zoom-in"
                                     data-aos-offset="300"
                                     data-aos-easing="ease-in-sine"
-                                    data-aos-duration="2000" className='d-flex flex-column gap-3 flex-md-row px-4 justify-content-center align-items-center'>
+                                    data-aos-duration="500" className='d-flex flex-column gap-3 flex-md-row px-4 justify-content-center align-items-center'>
                                     <Form.Control className='py-3' type="text" name='text' placeholder="Your Feedback" required />
                                     <button className='fw-bold text-white px-4 py-3 ms-2 border-0 rounded-2 band-bg'>Submit</button>
                                 </div>
@@ -22,7 +22,7 @@ const Feedback = () => {
                         </Row>
                     </Form.Group>
                 </Form>
-            </div>
+            </Container>
         </div>
     );
 };

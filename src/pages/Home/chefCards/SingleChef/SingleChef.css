@@ -17,4 +17,5 @@
     background-color: #0d427b0e;
     background-blend-mode: overlay;
     border: 1px solid var(--primary-color);
+    overflow-x: hidden;
   }

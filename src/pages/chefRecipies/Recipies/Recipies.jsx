@@ -11,6 +11,9 @@ const Recipies = ({ recipeData }) => {
                 {
                     recipeData.map((data, i) => <Col xs={12} md={6} lg={4} className=''>
                         <SingleRecipies
+                        data-aos="zoom-in"
+                        data-aos-easing="ease-in"
+                        data-aos-duration="500"
                             key={i}
                             data={data} />
                     </Col>)
