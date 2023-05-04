@@ -8,7 +8,9 @@ const PrivateRoutes = ({children}) => {
     const location = useLocation();
     // console.log(location);
     if (loading) {
-        return <Spinner className='d-block mx-auto' animation="border" />
+        return <div className='vh-100 d-flex justify-content-center align-items-center'>
+            <Spinner className='d-block mx-auto' size='lg' animation="border" />
+        </div>
     }
     if (user) {
         return children;       

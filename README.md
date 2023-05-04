@@ -11,6 +11,7 @@ This is a site in which anyone can serch for job. Now I will give the projects m
 - If user is not log in view recipe button redirect the user to login page.
 - I make email and password authentication, google authentication, github authentication.
 - If user is logged in in header section the user photo will shown and hover in the photo the user name is shown.
+- I add a spinner in private route.
 ## Thats for all. Thank you.
 ---
 ## Here is my live site link- https://chef-recipe-hunting-client.web.app
