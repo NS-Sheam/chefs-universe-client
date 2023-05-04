@@ -35,8 +35,8 @@ function Header() {
                             <ActiveLink to="/about">About</ActiveLink>
                             <ActiveLink to="/contact">Contact</ActiveLink>
                         </Nav>
-                        <Nav className="me-auto align-items-center flex-grow-1">
-                            <Link className=''>
+                        <Nav className="me-auto align-items-start align-items-md-center flex-grow-1">
+                            <Link className='ms-0 me-lg-3 ps-0 pe-3'>
                                 {
                                     user?.photoURL ?
                                         <img title={user.displayName} src={user.photoURL} className='user-img rounded-circle' alt="" /> :

@@ -8,8 +8,8 @@ const ActiveLink = ({to, children}) => {
         to={to}
         className={({ isActive, isPending }) =>
             isActive
-                ? "me-lg-3 px-3 my-1 my-md-0 py-1 py-md-2 active-nav"
-                : " me-lg-3 px-3 my-1 my-md-0 py-1 py-md-2"
+                ? "ms-0 me-lg-3 ps-0 pe-3 mx-md-3  my-1 my-md-0 py-1 py-md-2 active-nav"
+                : "ms-0 me-lg-3 ps-0 pe-3 mx-md-3  my-1 my-md-0 py-1 py-md-2"
 
         }
     >
