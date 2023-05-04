@@ -1,6 +1,7 @@
 .feedback{
         background: url("../../../assets/clientbg.png");
         background-blend-mode: overlay;
-        background-color: #da737364;
+        background-color: #0d427b27;
+        background-size: 100vw;
       
 }

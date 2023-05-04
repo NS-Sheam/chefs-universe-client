@@ -9,42 +9,44 @@ import { Col, Row } from 'react-bootstrap';
 
 const Banner = () => {
     return (
-        <Carousel className='banner vh-min-vh-100'>
-            <Carousel.Item interval={2000}>
+        <div className="banner">
+            <Carousel className='container'>
+                <Carousel.Item interval={2000}>
 
-                <div className='pt-3 d-flex flex-column flex-md-row align-items-center justify-content-center banner-carousel'>
-                    <Row>
-                        <Col xs={8} md={12}>
-                            <img className='d-none d-md-block' src={chefPng1} alt="" />
-                            <img className='w-100 d-md-none' src={chefPng1} alt="" />
-                        </Col>
+                    <div className='pt-3 d-flex flex-column flex-md-row align-items-center justify-content-center banner-carousel'>
+                        <Row>
+                            <Col xs={8} md={12}>
+                                <img className='d-none d-md-block' src={chefPng1} alt="" />
+                                <img className='w-100 d-md-none' src={chefPng1} alt="" />
+                            </Col>
 
-                    </Row>
-                    <div className='px-2 px-md-4 py-2'>
-                        <h1 className='fw-bold text-white text-lg text-end'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
-                        <p className='text-white text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                        </Row>
+                        <div className='px-2 px-md-4 py-2'>
+                            <h1 className='fw-bold text-white text-lg text-end'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
+                            <p className='text-white text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                        </div>
                     </div>
-                </div>
-            </Carousel.Item>
-            <Carousel.Item interval={2000}>
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
 
-                <div className='pt-3 d-flex flex-column flex-md-row align-items-center justify-content-center banner-carousel'>
+                    <div className='pt-3 d-flex flex-column flex-md-row align-items-center justify-content-center banner-carousel'>
 
-                    <div className='px-2 px-md-4 py-2'>
-                        <h1 className='fw-bold text-white text-lg text-start'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
-                        <p className='text-white text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                        <div className='px-2 px-md-4 py-2'>
+                            <h1 className='fw-bold text-white text-lg text-start'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
+                            <p className='text-white text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                        </div>
+                        <Row>
+                            <Col xs={8} md={12}>
+                                <img className='d-none d-md-block' src={chefPng2} alt="" />
+                                <img className='w-100 d-md-none' src={chefPng2} alt="" />
+                            </Col>
+
+                        </Row>
                     </div>
-                    <Row>
-                        <Col xs={8} md={12}>
-                            <img className='d-none d-md-block' src={chefPng2} alt="" />
-                            <img className='w-100 d-md-none' src={chefPng2} alt="" />
-                        </Col>
+                </Carousel.Item>
 
-                    </Row>
-                </div>
-            </Carousel.Item>
-
-        </Carousel>
+            </Carousel>
+        </div>
     );
 };
 

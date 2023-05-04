@@ -23,7 +23,7 @@ function Header() {
     }
 
     return (
-        <Navbar variant="dark" className='header' expand="lg">
+        <Navbar variant="dark" className='header vw-100' expand="lg">
             <Container>
                 <Link to="/" className='text-white'><small className='fw-bolder fst-italic'>chef's universe</small></Link>
                 <div>

@@ -1,13 +1,13 @@
 
 :root {
-  --primary-color: #EF5D60;
-  --secondary-color: #B1696A;
+  --primary-color: #063970;
+  --secondary-color: #074a92;
 }
   
   .band-color{
     color: var(--primary-color);
   }
-  .band-secondary{
+  .band-secondary, .band-bg-secondary{
     color: var(--secondary-color);
   }
   .band-bg{
@@ -22,4 +22,7 @@
 }
 .show-more{
   cursor: pointer;
+}
+.cheftalk-img{
+  height: 30rem;
 }

@@ -24,7 +24,8 @@
   background-color: #000000;
 }
 .banner{
-  background: url("../../../assets/head-banner.jpg") no-repeat;
+  background: url("../../../assets/head-banner.jpg");
+  background-size: 100vw;
+  background-color: #0d427b7b;
   background-blend-mode: overlay;
-  background-color: #c6959564;
 }
