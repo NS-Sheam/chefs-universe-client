@@ -23,11 +23,11 @@ const SingleRecipies = ({ data }) => {
     }
     return (
         <Card className='chefCard mb-4 h-100'>
-            
-                <LazyLoad className='h-25'>
-                    <Card.Img className='h-100' variant="top" src={recipeImg} />
-                </LazyLoad>
-            
+
+            <LazyLoad className='h-25'>
+                <Card.Img className='h-100' variant="top" src={recipeImg} />
+            </LazyLoad>
+
             <Card.Body>
                 <Card.Title className='band-color fw-bold h3'>{recipeName}</Card.Title>
                 <Card.Text className='text-start'> <span className='fw-bold'>Ingredients: </span>
@@ -39,7 +39,7 @@ const SingleRecipies = ({ data }) => {
                     <p className='text-start'>
                         <span className='fw-bold text-decoration-underline'>Cooking Process:</span> {methodOfCooking}
                     </p>
-                    <div className='d-flex justify-content-between align-content-center text-md'>
+                    <div className='d-flex justify-content-between align-item-center text-md'>
                         <p className='fw-bold'>
                             <span>Rating: {rating}</span>
                             <span>
@@ -49,12 +49,12 @@ const SingleRecipies = ({ data }) => {
                                 />
                             </span>
                         </p>
-                        <p className='favourite' onClick={handleFavouriteBtn}>
-                            {
-                                !favourite ?
-                                    <FontAwesomeIcon icon={faHeart} /> :
-                                    <FontAwesomeIcon className='band-color' icon={faHeart} />
-                            }
+                        <p>
+                            <FontAwesomeIcon
+                                icon={faHeart}
+                                onClick={handleFavouriteBtn}
+                                className={favourite ? "text-success h3" : "h3"}
+                            />
                         </p>
                     </div>
                 </Card.Text>

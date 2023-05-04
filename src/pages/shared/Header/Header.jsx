@@ -8,13 +8,12 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { Spinner } from 'react-bootstrap';
 import ActiveLink from '../ActiveLink/ActiveLink';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChessQueen } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
-    const { user, logOut,loading, setLoading } = useContext(AuthContext);
+    const { user, logOut, setLoading } = useContext(AuthContext);
     // console.log(user.displayName);
-    if (loading) {
-        return <Spinner className='mx-auto d-block'></Spinner>;
-    }
     const handleLogout = () => {
         console.log("hello");
         logOut()
@@ -26,7 +25,7 @@ function Header() {
     return (
         <Navbar variant="dark" className='header vw-100' expand="lg">
             <Container>
-                <Link to="/" className='text-white'><small className='fw-bolder fst-italic'>chef's universe</small></Link>
+                <Link to="/" className='text-white'><FontAwesomeIcon icon={faChessQueen} /> <small className='fw-bolder fst-italic'>chef's universe</small></Link>
                 <div>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" className=''>

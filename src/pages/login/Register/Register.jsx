@@ -25,7 +25,7 @@ const Register = () => {
                     photoURL: photo
                 })
                 console.log(createdUser);
-                navigate("/login")
+                navigate("/")
                 form.reset();
             })
             .catch(error => {

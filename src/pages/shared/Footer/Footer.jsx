@@ -9,9 +9,9 @@ const Footer = () => {
             <Container className="p-4">
                 <Row>
                     <Col lg={6} md={12} className="mb-4 mb-md-0">
-                        <h5 className="text-uppercase">Footer Content</h5>
+                        <h5 className="text-uppercase">Thanks for visiting</h5>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                            Thank you for visiting our chef-s universe website! We hope you enjoyed browsing through our collection of delicious recipes and found inspiration for your next culinary adventure. Our team of passionate chefs and food enthusiasts is dedicated to providing you with high-quality, easy-to-follow recipes that will take your cooking skills to the next level. Don't forget to bookmark our website and follow us on social media for updates on new recipes and cooking tips. Happy cooking!
                         </p>
                     </Col>
                     <Col lg={3} md={6} className="mb-4 mb-md-0">
@@ -32,13 +32,19 @@ const Footer = () => {
                         </ul>
                     </Col>
                     <Col lg={3} md={6} className="mb-4 mb-md-0">
-                        <h5 className="text-uppercase mb-0">Sub-menu</h5>
+                        <h5 className="text-uppercase mb-0">Social media</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <Link to="/login" className="text-white">Login</Link>
+                                <Link to="/" className="text-white">Facebook</Link>
                             </li>
                             <li>
-                                <Link to="/register" className="text-white">Register</Link>
+                                <Link to="/" className="text-white">Twiteer</Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="text-white">LinkId</Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="text-white">Instagram</Link>
                             </li>
                         </ul>
                     </Col>

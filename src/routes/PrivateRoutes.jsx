@@ -6,7 +6,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 const PrivateRoutes = ({children}) => {
     const {user, loading} = useContext(AuthContext);
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
     if (loading) {
         return <Spinner className='d-block mx-auto' animation="grow" />
     }

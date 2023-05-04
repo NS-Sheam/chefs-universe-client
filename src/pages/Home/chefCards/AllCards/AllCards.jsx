@@ -5,7 +5,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 const AllCards = ({ chefData }) => {
     return (
         <Container className='mx-auto'>
-            <h2 className='py-4 fw-bold'>Our chef's</h2>
+            <h2 className='pop-font pt-4 fw-bold'>Our chefs</h2>
+            <h3 className='os-font text-success'>Meet our skilled chefs</h3>
             <Row className='mt-4 mb-4'>
                 {
                     chefData.map((data) => <Col
