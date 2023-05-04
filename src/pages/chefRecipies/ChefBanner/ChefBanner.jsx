@@ -11,7 +11,7 @@ const ChefBanner = ({ chefData }) => {
 
             <div className='my-5 d-flex flex-column flex-md-row align-items-center'>
                 <Row className='w-100'>
-                    <Col xs={4} md={8}>
+                    <Col xs={8}>
                         <img className='img-fluid rounded-4' src={chefImage} alt="" />
                     </Col>
 
