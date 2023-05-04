@@ -10,16 +10,17 @@ import { Spinner } from 'react-bootstrap';
 import ActiveLink from '../ActiveLink/ActiveLink';
 
 function Header() {
-    const { user, logOut, loading } = useContext(AuthContext);
+    const { user, logOut,loading, setLoading } = useContext(AuthContext);
     // console.log(user.displayName);
     if (loading) {
-        return <Spinner></Spinner>;
+        return <Spinner className='mx-auto d-block'></Spinner>;
     }
     const handleLogout = () => {
         console.log("hello");
         logOut()
             .then()
             .catch(error => console.log(error))
+            setLoading(false);
     }
 
     return (
@@ -36,7 +37,7 @@ function Header() {
                             <ActiveLink to="/contact">Contact</ActiveLink>
                         </Nav>
                         <Nav className="me-auto align-items-start align-items-md-center flex-grow-1">
-                            <Link className='ms-0 me-lg-3 ps-0 pe-3'>
+                            <Link className=''>
                                 {
                                     user?.photoURL ?
                                         <img title={user.displayName} src={user.photoURL} className='user-img rounded-circle' alt="" /> :
@@ -45,8 +46,8 @@ function Header() {
                             </Link>
                             {
                                 user ?
-                                    <Link onClick={handleLogout} className='me-lg-3 py-2'><span>Logout</span></Link> :
-                                    <ActiveLink className='me-lg-3 py-2' to="/login">Login</ActiveLink>
+                                    <Link onClick={handleLogout} className='px-2 py-2 my-2 my-lg-0 text-center'><span>Logout</span></Link> :
+                                    <ActiveLink className='px-2 py-2 my-2 my-lg-0 text-center' to="/login">Login</ActiveLink>
                             }
                         </Nav>
                     </Navbar.Collapse>

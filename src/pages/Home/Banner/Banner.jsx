@@ -24,7 +24,7 @@ const Banner = () => {
                         </Row>
                         <div className='px-2 px-md-4 py-2'>
                             <h1 className='fw-bold text-white text-end'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
-                            <p className='text-white text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                            <p className='text-white text-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
                         </div>
                     </div>
                 </Carousel.Item>
@@ -34,7 +34,7 @@ const Banner = () => {
 
                         <div className='px-2 px-md-4 py-2'>
                             <h1 className='fw-bold text-white text-lg text-start'>Welcome to the universe of <br /> <span>dalicious recipies</span></h1>
-                            <p className='text-white text-sm-end me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
+                            <p className='text-white text-start me-0'>Discover a world of delicious and easy-to-follow recipes for any occasion. From classic family meals to creative and exotic dishes, our collection has something for everyone. With step-by-step instructions and beautiful photos, cooking has never been more enjoyable. Start exploring now and let's cook up something amazing together!</p>
                         </div>
                         <Row>
                             <Col xs={8} md={12}>

@@ -5,7 +5,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, setLoading } = useContext(AuthContext);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
@@ -30,6 +30,7 @@ const Register = () => {
             })
             .catch(error => {
                 setError(error.message);
+                setLoading(false);
             })
     }
     return (

@@ -9,7 +9,7 @@ const SingleChefTalk = ({ data, i }) => {
         // data-aos={i % 2 === 0 ? "zoom-in-right" : "zoom-in-left"}
         data-aos="fade-up"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="100"
+            data-aos-duration="1500"
             className={`border border-2 mb-4 h-100 d-flex gap-5 justify-content-between align-items-center ${i % 2 === 0 ? "flex-column flex-md-row" : "flex-column flex-md-row-reverse"} p-4 border rounded-3`}>
             <LazyLoad className='h-100 w-100'>
                 <Card.Img className='cheftalk-img h-100 img-fluid' variant="top" src={chefImage} />

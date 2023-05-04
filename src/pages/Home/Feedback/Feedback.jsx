@@ -6,7 +6,8 @@ const Feedback = () => {
     return (
         <div className='feedback d-flex vh-100 align-items-center justify-content-center mb-4'>
             <Container>
-                <h4 className='text-black py-4 fw-bold text-center'>Give us your feedback about our chefs</h4>
+                <h3 className='text-black py-4 fw-bold text-center'>Give your feedback</h3>
+                <p className='text-center'>We greatly value your feedback! We believe that your thoughts and opinions are crucial in helping us improve our website and providing the best experience possible for our users. Whether you have suggestions for new recipes, feedback on existing ones, or just want to share your thoughts, we welcome and appreciate all feedback. Our team carefully considers every comment we receive and uses them to continuously improve our website. So please, don't hesitate to share your thoughts with us. Thank you for being a part of our community and helping us make our chef recipe website even better!</p>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Row>

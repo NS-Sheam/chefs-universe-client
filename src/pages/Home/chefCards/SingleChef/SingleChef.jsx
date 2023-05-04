@@ -11,7 +11,7 @@ const SingleChef = ({ data }) => {
     const { chefId, recipeId, chefImage, chefName, yearOfExperience, numberOfRecipes, likes } = data;
     return (
         <Card className='chefCard mb-4 data-card mx-auto'>
-            <LazyLoad className='h-50'>
+            <LazyLoad className='h-100 w-100'>
                 <Card.Img className='h-100 w-100' variant="top" src={chefImage} />
             </LazyLoad>
             <Card.Body>

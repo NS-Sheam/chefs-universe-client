@@ -1,11 +1,11 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import SingleRecipies from '../SingleRecipies/SingleRecipies';
 
 const Recipies = ({ recipeData }) => {
     // console.log(recipeData);
     return (
-        <div className='my-5'>
+        <Container className='my-5'>
             <h1 className='mb-5'>My Recipies</h1>
             <Row className='mt-4 mb-4'>
                 {
@@ -13,13 +13,13 @@ const Recipies = ({ recipeData }) => {
                         <SingleRecipies
                         data-aos="zoom-in"
                         data-aos-easing="ease-in"
-                        data-aos-duration="500"
+                        data-aos-duration="1000"
                             key={i}
                             data={data} />
                     </Col>)
                 }
             </Row>
-        </div>
+        </Container>
     );
 };
 

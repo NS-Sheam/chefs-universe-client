@@ -6,7 +6,7 @@ import googleBtn from "../../../assets/GoogleSignUpDark.png"
 import gitHubBtn from "../../../assets/gh-login-button.png"
 
 const Login = () => {
-    const { signIn, signInWithGoogle, githubSignIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle, githubSignIn, setLoading } = useContext(AuthContext);
     const [error, setError] = useState(null);
     const location = useLocation();
     const navigate = useNavigate();
@@ -27,6 +27,7 @@ const Login = () => {
             })
             .catch(error => {
                 setError(error);
+                setLoading(false);
             })
 
     }
@@ -37,7 +38,10 @@ const Login = () => {
                 // console.log(loggedUser);
                 navigate(from, { replace: true })
             })
-            .catch(error => setError(error))
+            .catch(error => {
+                setError(error);
+                setLoading(false);
+            })
     }
     const handleGithubSignIn = () => {
         githubSignIn()
@@ -45,7 +49,10 @@ const Login = () => {
                 const loggedUser = result.user;
                 navigate(from, { replace: true })
             })
-            .catch(error => setError(error))
+            .catch(error => {
+                setError(error);
+                setLoading(false);
+            })
     }
     return (
         <Container className='mx-auto my-5'>
