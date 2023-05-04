@@ -9,11 +9,12 @@ const Recipies = ({ recipeData }) => {
             <h1 className='mb-5'>My Recipies</h1>
             <Row className='mt-4 mb-4'>
                 {
-                    recipeData.map((data, i) => <Col xs={12} md={6} lg={4} className=''>
-                        <SingleRecipies
+                    recipeData.map((data, i) => <Col
+                        xs={12} md={6} lg={4}
                         data-aos="zoom-in"
                         data-aos-easing="ease-in"
-                        data-aos-duration="1000"
+                        data-aos-duration="500">
+                        <SingleRecipies
                             key={i}
                             data={data} />
                     </Col>)
