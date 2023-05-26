@@ -13,7 +13,8 @@ const AllCards = ({ chefData }) => {
                         xs={12} md={6} lg={4}
                         data-aos="zoom-in"
                         data-aos-easing="ease-in"
-                        data-aos-duration="500"
+                        data-aos-duration="200"
+                        data-aos-offset="200"
                         >
                         <SingleChef
                             key={data.chefId}
